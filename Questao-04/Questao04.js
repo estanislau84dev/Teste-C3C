@@ -1,4 +1,5 @@
-function LuidyMoura(numero) {
+function LuidyMoura() {
+    var numero = document.querySelector('#valor').value;
     let contador = []
     for (let i = 1; i <= numero; i++) {
         if (i % 5 == 0 && i % 9 == 0) {
@@ -12,7 +13,5 @@ function LuidyMoura(numero) {
         }
 
     }
-    console.log(contador.join(", "))
-}
-
-LuidyMoura(100)
+    document.querySelector('#resultado').innerHTML = contador.join(", ")
+} 
