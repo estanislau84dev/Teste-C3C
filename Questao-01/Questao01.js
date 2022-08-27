@@ -1,13 +1,23 @@
-function checarTipoTriangulo(ladoA, ladoB, ladoC) {
-  let tipoTriangulo
-  if (ladoA == ladoB && ladoB == ladoC) {
-    tipoTriangulo = "equilátero"
-  } else if (ladoA == ladoB || ladoA == ladoC || ladoC == ladoB) {
-    tipoTriangulo = "isosceles"
-
-  } else {
-    tipoTriangulo = "escaleno"
+const typeTriangle = (a, b, c) => {
+    if (a < (b + c) && b < (a + c) && c < (a + b)) {
+  
+      if (a == b && b == c) {
+        console.log('Triângulo equilátero');
+      }
+      else if (a == b || a == c || c == b) {
+        console.log('Triângulo isóceles');
+      }
+      else {
+        console.log('Triângulo escaleno');
+      }
+    }
+    else {
+      console.log('Nenhuma medida foi informada!');
+    }
+  
   }
-
-  return tipoTriangulo
-}
+  
+  typeTriangle(10, 5, 10);
+  typeTriangle(10, 10, 10);
+  typeTriangle(3, 4, 5);
+  typeTriangle();
